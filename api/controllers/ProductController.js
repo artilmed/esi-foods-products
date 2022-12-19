@@ -13,7 +13,7 @@ export const getAllProducts = async (req, res) => {
 // Get product by id
 export const getProductById = async (req, res) => {
   try {
-    const product = await Project.findById(req.params.id);
+    const product = await Product.findById(req.params.id);
     res.status(200).json(product);
   } catch (error) {
     res.status(500).json({ message: error.message });
